@@ -1,0 +1,147 @@
+/* TeamHorizontal.css */
+.team-section {
+    background-color: #FF914D;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.team-section h2 {
+    font-size: 2.8rem;
+    color: #1163b6;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.team-section p.subtitle {
+    font-size: 1.3rem;
+    color: #4a4a4a;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.team-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 30px 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.1) transparent;
+}
+
+.team-row::-webkit-scrollbar {
+    height: 8px;
+    background: transparent;
+}
+
+.team-row::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.team-member-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    background: #f8f5ea;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.member-photo-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    position: relative;
+}
+
+.member-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.05) contrast(1.05);
+}
+
+.member-name {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.member-position {
+    color: #1163b6;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .team-section h2 {
+        font-size: 2.4rem;
+    }
+    
+    .team-section p.subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 60px 15px;
+    }
+    
+    .team-section h2 {
+        font-size: 2rem;
+    }
+    
+    .team-section p.subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .team-member-card {
+        flex: 0 0 240px;
+        padding: 25px;
+    }
+    
+    .member-photo-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .member-name {
+        font-size: 1.4rem;
+    }
+    
+    .member-position {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member-card {
+        flex: 0 0 220px;
+        padding: 20px;
+    }
+    
+    .member-photo-container {
+        width: 130px;
+        height: 130px;
+    }
+}

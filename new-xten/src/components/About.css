@@ -1,80 +1,101 @@
-
 .about {
-  padding: 100px 0;
+  background: linear-gradient(to right, #e0f7fa, #f9f9ff);
+  padding: 60px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
   align-items: center;
-  gap: 60px;
+  justify-content: space-between;
 }
 
 .about-text {
-  max-width: 500px;
+  flex: 1 1 500px;
 }
 
-.text-left {
-  text-align: left;
-  margin-bottom: 30px;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1a1a1a;
 }
 
 .about-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #7f8c8d;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  color: #090000;
 }
 
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
 }
 
 .stat {
+  background-color: #FF914D;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .stat h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #667eea;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: red;
 }
 
 .stat p {
-  color: #7f8c8d;
-  font-weight: 500;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn {
+  background-color: #d51010;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #520808;
+}
+
+.about-image-wrapper {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: center;
 }
 
 .about-image {
-  position: relative;
-}
-
-.about-image img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .stat h3 {
-    font-size: 2rem;
-  }
-  
-  .about-image img {
-    height: 300px;
-  }
+.about-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color:#e0f7fa(255, 165, 0, 0.9);
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

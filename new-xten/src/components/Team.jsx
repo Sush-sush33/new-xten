@@ -1,51 +1,51 @@
 
 import React from 'react';
-import './Team.css';
+import './TeamHorizontal.css';
+import ceoImg from '../assets/deepak poudel .png';
+import sundarImg from '../assets/Sundar-Adhikari.png';
+import amritImg from '../assets/Amrit-Adhikari.png';
 
-const Team = () => {
+const TeamHorizontal = () => {
   const teamMembers = [
     {
       name: "Deepak Poudel",
       position: "CEO & Founder",
-      image: "C:\Users\tiwar\Desktop\new-xten\new-xten\src\assets\ceo.png"
+      image: ceoImg
     },
     {
       name: "Sundar Adhikari",
       position: "Director",
-      image: "C:\Users\tiwar\Desktop\new-xten\new-xten\src\assets\Sundar-Adhikari.png"
+      image: sundarImg
     },
     {
       name: "Amrit Adhikari",
       position: "Director",
-      image: "C:\Users\tiwar\Desktop\new-xten\new-xten\src\assets\Amrit-Adhikari.png"
-    },
-    
+      image: amritImg
+    }
   ];
 
   return (
-    <section id="team" className="team section">
-      <div className="container">
-        <h2 className="section-title">Our Team</h2>
-        <p className="section-subtitle">
-          Meet the talented professionals behind our success
-        </p>
-        
-        <div className="team-grid grid grid-2">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-card card">
-              <div className="member-image">
-                <img src={member.image} alt={member.name} />
-              </div>
-              <div className="member-info">
-                <h3 className="member-name">{member.name}</h3>
-                <p className="member-position">{member.position}</p>
-              </div>
+     <section className="team-section">
+      <h2>Our Team</h2>
+      <p className="subtitle">Meet the talented professionals behind our success</p>
+      
+      <div className="team-row">
+        {teamMembers.map((member, index) => (
+          <div className="team-member-card" key={index}>
+            <div className="member-photo-container">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                className="member-photo" 
+              />
             </div>
-          ))}
-        </div>
+            <h3 className="member-name">{member.name}</h3>
+            <p className="member-position">{member.position}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default Team;
+export default TeamHorizontal;

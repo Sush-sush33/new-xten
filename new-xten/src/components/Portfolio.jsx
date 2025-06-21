@@ -5,6 +5,9 @@ import project1 from '../assets/Investment Management System.png';
 import project2 from '../assets/Task Tracking App.png';
 import project3 from '../assets/Property Management System .png';
 import project4 from '../assets/Nova CRM.png';
+import project5 from '../assets/CRM.png';
+
+
 
 const Portfolio = () => {
   const projects = [
@@ -31,7 +34,16 @@ const Portfolio = () => {
       description: "Comprehensive digital marketing strategy and execution",
       image: project4,
       category: "Customer Centric"
+    },
+
+    {
+      
+      title: "Customer Relationship System",
+      description: "Enterprise solution for customer management",
+      image:project5,
+      category: "CRM",
     }
+
   ];
 
   return (
